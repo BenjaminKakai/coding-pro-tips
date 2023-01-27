@@ -1,0 +1,13 @@
+To create a three-column floating CSS layout, you will need to use the CSS float property to float elements to the left or right of their container. Here is an example of how you could set up a three-column layout using the float property:
+<div id="container">
+  <div id="column1" class="column">Column 1</div>
+  <div id="column2" class="column">Column 2</div>
+  <div id="column3" class="column">Column 3</div>
+</div>
+
+
+
+.column {
+  float: left;
+  width: 32%; /* adjust as needed */
+}
