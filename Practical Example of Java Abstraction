@@ -1,0 +1,43 @@
+interface RemoteControl {
+  public void turnOn();
+  public void turnOff();
+  public void setChannel(int channel);
+  public void setVolume(int volume);
+}
+
+class Television implements RemoteControl {
+  private int channel;
+  private int volume;
+  
+  @Override
+  public void turnOn() {
+    System.out.println("Turning on the television");
+  }
+  
+  @Override
+  public void turnOff() {
+    System.out.println("Turning off the television");
+  }
+  
+  @Override
+  public void setChannel(int channel) {
+    this.channel = channel;
+    System.out.println("Setting channel to: " + channel);
+  }
+  
+  @Override
+  public void setVolume(int volume) {
+    this.volume = volume;
+    System.out.println("Setting volume to: " + volume);
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Television tv = new Television();
+    tv.turnOn();
+    tv.setChannel(5);
+    tv.setVolume(10);
+    tv.turnOff();
+  }
+}
